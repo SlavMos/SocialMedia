@@ -1,6 +1,7 @@
 import React from "react";
-import s from "./Content.module.css";
-export default function Content() {
+import s from "./Profile.module.css";
+import MyPosts from "./MyPosts/MyPosts";
+export default function Profile() {
   return (
     <div className={s.content}>
       <div>
@@ -10,16 +11,7 @@ export default function Content() {
         />
       </div>
       <div>Ava+description</div>
-      <div>
-        My Posts
-        <div>New Posts</div>
-        <div>
-          <div>post1</div>
-          <div>post2</div>
-          <div>post3</div>
-          <div>post4</div>
-        </div>
-      </div>
+      <MyPosts />
     </div>
   );
 }
