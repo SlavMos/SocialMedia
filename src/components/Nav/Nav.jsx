@@ -1,5 +1,6 @@
 import React from "react";
 import s from "./Nav.module.css";
+import { NavLink } from "react-router-dom";
 
 export default function Nav() {
   return (
@@ -7,19 +8,19 @@ export default function Nav() {
       {" "}
       <nav className={s.nav}>
         <div>
-          <a href="#">Profile</a>
+          <NavLink to="/profile">Profile</NavLink>
         </div>
         <div>
-          <a href="#">Message</a>
+          <NavLink to="/dialogs">Dialogs</NavLink>
         </div>
         <div>
-          <a href="">News</a>
+          <NavLink to="/dialogs">Dialogs</NavLink>
         </div>
         <div>
-          <a href="">Music</a>
+          <NavLink to="/dialogs">Dialogs</NavLink>
         </div>
         <div>
-          <a href="">Settings</a>
+          <NavLink to="/dialogs">Dialogs</NavLink>
         </div>
       </nav>
     </div>
