@@ -1,11 +1,16 @@
 import React from "react";
-import Posts from "./Posts/Posts";
 
 export default function MyPosts() {
   return (
     <div>
-      <div>New Posts</div>
-      <Posts />
+      <h3>My posts</h3>
+      <div>
+        <textarea name="" id=""></textarea>
+      </div>
+      <div>
+        <button>Add posts</button>
+      </div>
+      <div>posts</div>
     </div>
   );
 }
