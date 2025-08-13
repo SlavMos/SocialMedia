@@ -5,7 +5,7 @@ import Profile from "./components/Profile/Profile";
 import Nav from "./components/Nav/Nav";
 import Dialogs from "./components/Dialogs/Dialogs";
 
-function App() {
+function App(props) {
   return (
     <div className="app-wrapper">
       <Header />
@@ -13,7 +13,15 @@ function App() {
       <div className="app-wrapper-content">
         <Routes>
           <Route path="/profile" element={<Profile />} />
-          <Route path="/dialogs" element={<Dialogs />} />
+          <Route
+            path="/dialogs"
+            element={
+              <Dialogs
+                messagesData={props.messagesData}
+                dialogsData={props.dialogsData}
+              />
+            }
+          />
         </Routes>
       </div>
     </div>
