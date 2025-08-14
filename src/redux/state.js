@@ -13,6 +13,7 @@ let state = {
     { id: 3, text: "hello" },
     { id: 4, text: "hello" },
     { id: 5, text: "hello moto" },
+    { id: 6, text: "hello moto" },
   ],
 };
 
