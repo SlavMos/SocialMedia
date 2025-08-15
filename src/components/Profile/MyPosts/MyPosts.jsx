@@ -1,6 +1,6 @@
 import React from "react";
 
-export default function MyPosts() {
+export default function MyPosts(props) {
   return (
     <div>
       <h3>My posts</h3>
@@ -10,6 +10,9 @@ export default function MyPosts() {
       <div>
         <button>Add posts</button>
       </div>
+      {props.posts.map((posts) => (
+        <div key={posts.id}>{posts.message}</div>
+      ))}
       <div>posts</div>
     </div>
   );

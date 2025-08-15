@@ -8,7 +8,7 @@ export default function Dialogs(props) {
     <div className={s.dialogs}>
       <div className={s.items}>
         <div className={s.item}>
-          {props.dialogsData.map((dialogs) => (
+          {props.dialogsState.dialogsData.map((dialogs) => (
             <div className={s.item} key={dialogs.id}>
               <NavLink to={`/dialogs/${dialogs.id}`}>{dialogs.name}</NavLink>
             </div>
@@ -16,7 +16,7 @@ export default function Dialogs(props) {
         </div>
       </div>
       <div className={s.messages}>
-        {props.messagesData.map((messages) => (
+        {props.dialogsState.messagesData.map((messages) => (
           <div className={s.dialog} key={messages.id}>
             {messages.text}
           </div>
