@@ -3,7 +3,6 @@ import s from "./Dialogs.module.css";
 import { NavLink } from "react-router-dom";
 
 export default function Dialogs(props) {
-  <NavLink to="/dialogs/1">Veo </NavLink>;
   return (
     <div className={s.dialogs}>
       <div className={s.items}>
@@ -18,7 +17,7 @@ export default function Dialogs(props) {
       <div className={s.messages}>
         {props.dialogsState.messagesData.map((messages) => (
           <div className={s.dialog} key={messages.id}>
-            {messages.text}
+            <div>{messages.text}</div>
           </div>
         ))}
       </div>

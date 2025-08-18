@@ -1,17 +1,27 @@
-import React from "react";
+import React, { createRef } from "react";
 
 export default function MyPosts(props) {
+  let newPostElement = React.createRef();
+
+  let addPosts = () => {
+    let text = newPostElement.current.value;
+    props.addPost(text);
+  };
+
   return (
     <div>
       <h3>My posts</h3>
       <div>
-        <textarea name="" id=""></textarea>
+        <textarea ref={newPostElement}></textarea>
       </div>
       <div>
-        <button>Add posts</button>
+        <button onClick={addPosts}>Add posts</button>
       </div>
       {props.posts.map((posts) => (
-        <div key={posts.id}>{posts.message}</div>
+        <div key={posts.id}>
+          <div>{posts.message}</div>
+          <div>{posts.likesCount}</div>
+        </div>
       ))}
       <div>posts</div>
     </div>

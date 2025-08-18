@@ -1,11 +1,9 @@
-import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
 import "./index.css";
 import App from "./App.jsx";
 import { BrowserRouter } from "react-router-dom";
+import { addPost } from "./redux/state.js";
 import state from "./redux/state.js";
-createRoot(document.getElementById("root")).render(
-  <BrowserRouter>
-    <App state={state} />
-  </BrowserRouter>
-);
+import { rerenderEntireTree } from "./render.jsx";
+
+rerenderEntireTree(state);
