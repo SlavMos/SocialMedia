@@ -1,4 +1,4 @@
-import { rerenderEntireTree } from "../render";
+let rerenderEntireTree = () => {};
 
 let state = {
   dialogsPage: {
@@ -38,6 +38,10 @@ export let addPost = (postMessage) => {
   };
   state.profileData.posts.push(newPost);
   rerenderEntireTree();
+};
+
+export let subscribe = (observer) => {
+  rerenderEntireTree = observer;
 };
 
 export default state;
