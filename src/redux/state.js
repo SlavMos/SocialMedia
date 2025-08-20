@@ -8,6 +8,7 @@ let state = {
       { id: 3, name: "Bla" },
       { id: 4, name: "Blddddass" },
       { id: 5, name: "Bla" },
+      { id: 5, name: "Bla" },
     ],
 
     messagesData: [
