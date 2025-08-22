@@ -27,6 +27,7 @@ let state = {
       { id: 2, message: "hello", likesCount: 2 },
       { id: 3, message: "hello", likesCount: 3 },
       { id: 4, message: "hello", likesCount: 4 },
+      { id: 5, message: "hello", likesCount: 5 },
     ],
   },
 };
