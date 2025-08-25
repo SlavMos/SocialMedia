@@ -12,13 +12,13 @@ export default function Nav() {
         <NavLink to="/dialogs">Dialogs</NavLink>
       </div>
       <div>
-        <NavLink to="/dialogs">Dialogs</NavLink>
+        <NavLink to="/dialogs">News</NavLink>
       </div>
       <div>
-        <NavLink to="/dialogs">Dialogs</NavLink>
+        <NavLink to="/dialogs">Music</NavLink>
       </div>
       <div>
-        <NavLink to="/dialogs">Dialogs</NavLink>
+        <NavLink to="/dialogs">Settings</NavLink>
       </div>
     </nav>
   );
