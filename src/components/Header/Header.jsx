@@ -1,5 +1,5 @@
 import React from "react";
 import s from "./Header.module.css";
 export default function Header() {
-  return <div className={s.header}>Header</div>;
+  return <div className={s.header}>Headers</div>;
 }
