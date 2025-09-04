@@ -10,7 +10,7 @@ let rerenderEntireTree = (state) => {
     <BrowserRouter>
       <App
         state={state}
-        addPost={store.addPost.bind(store)} // привязали контекст
+        dispatch={store.dispatch.bind(store)} // привязали контекст
       />
     </BrowserRouter>
   );

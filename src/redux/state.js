@@ -47,14 +47,14 @@ let store = {
     if (action.type === "ADD-POST") {
       let newPost = {
         id: this._state.profileData.posts.length + 1,
-        message: postMessage,
+        message: action.message,
         likesCount: 0,
       };
 
       this._state.profileData.posts.push(newPost);
       rerenderEntireTree(this._state);
     } else if (action.type === "UPDATE-NEW-POST-TEXT") {
-      console.log("fds");
+      console.log("fdczcs");
     }
   },
 };

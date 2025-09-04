@@ -5,7 +5,7 @@ export default function MyPosts(props) {
 
   let addPosts = () => {
     let text = newPostElement.current.value;
-    props.addPost(text);
+    props.dispatch({ type: "ADD-POST", message: text });
   };
 
   return (
