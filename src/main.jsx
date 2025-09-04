@@ -3,14 +3,20 @@ import React from "react";
 import "./index.css";
 import App from "./App.jsx";
 import { BrowserRouter } from "react-router-dom";
-import state, { addPost, subscribe } from "./redux/state.js";
+import store from "./redux/state.js"; // импортируем store
 
-export let rerenderEntireTree = () => {
+let rerenderEntireTree = (state) => {
   createRoot(document.getElementById("root")).render(
     <BrowserRouter>
-      <App addPost={addPost} state={state} />
+      <App
+        state={state}
+        addPost={store.addPost.bind(store)} // привязали контекст
+      />
     </BrowserRouter>
   );
 };
-rerenderEntireTree(state);
-subscribe(rerenderEntireTree);
+
+rerenderEntireTree(store.getState());
+
+// подписка
+store.subscribe(rerenderEntireTree);
