@@ -39,19 +39,23 @@ let store = {
     return this._state;
   },
 
-  addPost(postMessage) {
-    let newPost = {
-      id: this._state.profileData.posts.length + 1,
-      message: postMessage,
-      likesCount: 0,
-    };
-
-    this._state.profileData.posts.push(newPost);
-    rerenderEntireTree(this._state);
-  },
-
   subscribe(observer) {
     rerenderEntireTree = observer; // подписка
+  },
+
+  dispatch(action) {
+    if (action.type === "ADD-POST") {
+      let newPost = {
+        id: this._state.profileData.posts.length + 1,
+        message: postMessage,
+        likesCount: 0,
+      };
+
+      this._state.profileData.posts.push(newPost);
+      rerenderEntireTree(this._state);
+    } else if (action.type === "UPDATE-NEW-POST-TEXT") {
+      console.log("fds");
+    }
   },
 };
 
