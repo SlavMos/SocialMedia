@@ -1,4 +1,5 @@
 import React, { createRef } from "react";
+import { addPostActionCreate } from "../../../redux/state";
 
 export default function MyPosts(props) {
   let newPostElement = React.createRef();
@@ -6,12 +7,6 @@ export default function MyPosts(props) {
   let addPosts = () => {
     let text = newPostElement.current.value;
     props.dispatch(addPostActionCreate(text));
-  };
-  let addPostActionCreate = (text) => {
-    return {
-      type: "ADD-POST",
-      message: text,
-    };
   };
 
   return (

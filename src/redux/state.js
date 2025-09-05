@@ -58,5 +58,10 @@ let store = {
     }
   },
 };
-
+export let addPostActionCreate = (text) => {
+  return {
+    type: "ADD-POST",
+    message: text,
+  };
+};
 export default store;
