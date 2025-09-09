@@ -17,7 +17,7 @@ function App(props) {
             path="/profile"
             element={
               <Profile
-                dispatch={props.dispatch}
+                store={props.store}
                 profileState={props.state.profileData}
               />
             }

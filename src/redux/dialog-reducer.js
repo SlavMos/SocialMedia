@@ -1,6 +1,4 @@
-const dialogReducer = (state, action) => {
-  // Добавление поста
-
+export const dialogReducer = (state, action) => {
   // Обновление текста нового сообщения (печатаем в инпуте сообщений)
   if (action.type === "UPDATE-NEW-MESSAGE-BODY") {
     state.newMessageBody = action.body;
@@ -17,4 +15,5 @@ const dialogReducer = (state, action) => {
       text: body, // сам текст сообщения
     });
   }
+  return state;
 };

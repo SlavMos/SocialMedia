@@ -1,4 +1,4 @@
-const profileReducer = (state, action) => {
+export const profileReducer = (state, action) => {
   // Добавление поста
   if (action.type === "ADD-POST") {
     let newPost = {
